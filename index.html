@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Professional portfolio of Fezan Awan, HSE Officer.">
+<title>Fezan Awan | HSE Officer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#081522;--navy2:#0d2233;--yellow:#f4c430;--white:#f7f9fb;--muted:#aebdca;--card:#10293c;--line:#21445c}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,Arial,sans-serif;background:var(--navy);color:var(--white);line-height:1.65}
+a{color:inherit;text-decoration:none}
+.container{width:min(1120px,92%);margin:auto}
+nav{position:fixed;top:0;left:0;right:0;z-index:20;background:rgba(8,21,34,.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.07)}
+.navin{height:72px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-weight:800;letter-spacing:.08em}.logo span{color:var(--yellow)}
+.links{display:flex;gap:26px;font-size:14px;font-weight:600}.links a:hover{color:var(--yellow)}
+.menu{display:none;background:none;border:0;color:white;font-size:26px}
+.hero{min-height:100vh;display:flex;align-items:center;padding:110px 0 70px;background:radial-gradient(circle at 80% 30%,#16384f 0,transparent 35%),linear-gradient(135deg,var(--navy),#0a1d2b)}
+.hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:70px;align-items:center}
+.badge{display:inline-flex;gap:9px;align-items:center;border:1px solid #31566d;padding:8px 13px;border-radius:99px;color:#dce8ef;font-size:13px;margin-bottom:22px}.dot{width:8px;height:8px;background:var(--yellow);border-radius:50%;box-shadow:0 0 14px var(--yellow)}
+h1{font-size:clamp(46px,7vw,78px);line-height:1.02;letter-spacing:-.05em;margin-bottom:14px}
+.hero h2{font-size:clamp(22px,3vw,34px);color:var(--yellow);margin-bottom:18px}
+.hero p{max-width:650px;color:var(--muted);font-size:17px}
+.buttons{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 20px;border-radius:8px;font-weight:700;border:1px solid var(--line);transition:.2s}
+.btn.primary{background:var(--yellow);color:#111;border-color:var(--yellow)}.btn:hover{transform:translateY(-2px)}
+.profile-card{background:linear-gradient(160deg,#16384d,#0c2131);border:1px solid #28536b;border-radius:22px;padding:32px;text-align:center;box-shadow:0 25px 70px #0005}
+.avatar{width:145px;height:145px;border-radius:50%;margin:0 auto 22px;background:var(--yellow);color:#0b1a25;display:grid;place-items:center;font-size:48px;font-weight:800;border:7px solid #f8d967}
+.profile-card h3{font-size:24px}.profile-card p{color:var(--muted);margin-top:5px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:25px}.stat{background:#0a1c2a;padding:15px 8px;border-radius:12px}.stat strong{display:block;color:var(--yellow);font-size:21px}.stat small{color:var(--muted);font-size:11px}
+section{padding:95px 0}.section-head{margin-bottom:42px}.eyebrow{color:var(--yellow);font-weight:800;text-transform:uppercase;letter-spacing:.14em;font-size:12px}.section-head h2{font-size:38px;letter-spacing:-.03em;margin-top:6px}.section-head p{color:var(--muted);max-width:700px;margin-top:9px}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:45px}.about p{color:var(--muted);font-size:16px}
+.info-list{display:grid;gap:13px}.info{display:flex;gap:14px;align-items:flex-start;padding:17px;background:var(--card);border:1px solid var(--line);border-radius:12px}.icon{color:var(--yellow);font-weight:800;min-width:24px}.info span{color:var(--muted)}
+.timeline{position:relative;display:grid;gap:22px}.timeline:before{content:"";position:absolute;left:9px;top:10px;bottom:10px;width:2px;background:var(--line)}.job{position:relative;padding-left:38px}.job:before{content:"";position:absolute;left:3px;top:7px;width:14px;height:14px;border-radius:50%;background:var(--yellow);box-shadow:0 0 0 5px var(--navy)}
+.job-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:23px}.job-card h3{font-size:20px}.job-card .company{color:var(--yellow);font-weight:700}.date{display:inline-block;color:var(--muted);font-size:13px;margin:5px 0 12px}.job-card p{color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:23px;transition:.2s}.card:hover{transform:translateY(-4px);border-color:#416d87}.card .big{font-size:26px;margin-bottom:12px}.card h3{font-size:17px}.card p{color:var(--muted);font-size:14px;margin-top:5px}
+.cert{min-height:170px}.cert strong{display:block;color:var(--yellow);font-size:13px;text-transform:uppercase;letter-spacing:.08em;margin-bottom:9px}
+.edu{display:grid;grid-template-columns:1fr 1fr;gap:18px}.edu .card{min-height:150px}
+.contact{background:var(--navy2)}.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px}.contact-box{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:28px}.contact-item{padding:15px 0;border-bottom:1px solid var(--line)}.contact-item:last-child{border:0}.contact-item small{display:block;color:var(--muted);margin-bottom:2px}.contact-item a{color:#fff;word-break:break-word}.contact-item a:hover{color:var(--yellow)}
+footer{padding:28px 0;border-top:1px solid var(--line);color:var(--muted);font-size:13px;text-align:center}
+@media(max-width:800px){.links{display:none}.menu{display:block}.hero-grid,.about,.contact-grid,.edu{grid-template-columns:1fr}.grid{grid-template-columns:1fr 1fr}.hero{padding-top:120px}.profile-card{max-width:480px}.stats{max-width:450px;margin-left:auto;margin-right:auto}}
+@media(max-width:520px){.grid{grid-template-columns:1fr}.buttons .btn{width:100%}section{padding:70px 0}.section-head h2{font-size:31px}}
+</style>
+</head>
+<body>
+<nav><div class="container navin">
+<a class="logo" href="#home">FEZAN<span>.</span></a>
+<div class="links"><a href="#about">About</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#certifications">Certifications</a><a href="#education">Education</a><a href="#contact">Contact</a></div>
+<button class="menu" onclick="toggleMenu()">☰</button>
+</div></nav>
+
+<main id="home">
+<section class="hero"><div class="container hero-grid">
+<div>
+<div class="badge"><span class="dot"></span> Available for professional opportunities</div>
+<h1>Fezan Awan</h1>
+<h2>HSE Officer</h2>
+<p>Dedicated Health, Safety & Environment professional focused on hazard identification, risk assessment, safety inspections, incident investigation and building a strong safety culture on site.</p>
+<div class="buttons"><a class="btn primary" href="#contact">Contact Me</a><a class="btn" href="Fezan-Awan-CV.pdf" download>Download CV</a><a class="btn" href="https://www.linkedin.com/in/faizan-awan-b0352936b" target="_blank">LinkedIn ↗</a></div>
+</div>
+<div class="profile-card">
+<div class="avatar">FA</div><h3>HSE Professional</h3><p>Karachi, Pakistan</p>
+<div class="stats"><div class="stat"><strong>3+</strong><small>Years Experience</small></div><div class="stat"><strong>3</strong><small>Core Certifications</small></div><div class="stat"><strong>7+</strong><small>HSE Skills</small></div></div>
+</div>
+</div></section>
+
+<section id="about"><div class="container">
+<div class="section-head"><span class="eyebrow">Profile</span><h2>About Me</h2><p>Professional HSE profile based on the information provided in my CV and updated career details.</p></div>
+<div class="about"><div><p>I am an HSE Officer with 3 years of professional experience. My work focuses on identifying hazards, assessing risks, supporting safe work practices, conducting inspections and audits, and promoting safety awareness across site activities.</p><p style="margin-top:18px">I hold IOSH, OSHA and NEBOSH IGC certifications and am continuing my Bachelor's degree in Environmental Sciences.</p></div>
+<div class="info-list">
+<div class="info"><b class="icon">⌁</b><div><b>Location</b><br><span>Karachi, Pakistan</span></div></div>
+<div class="info"><b class="icon">◎</b><div><b>Designation</b><br><span>HSE Officer</span></div></div>
+<div class="info"><b class="icon">✓</b><div><b>Professional Experience</b><br><span>3 years</span></div></div>
+<div class="info"><b class="icon">✉</b><div><b>Email</b><br><span>faizanawanf27@gmail.com</span></div></div>
+</div></div>
+</div></section>
+
+<section id="experience"><div class="container">
+<div class="section-head"><span class="eyebrow">Career</span><h2>Professional Experience</h2></div>
+<div class="timeline">
+<div class="job"><div class="job-card"><h3>HSE Officer</h3><div class="company">Shahbaz World Builders (SMC-Pvt Ltd) · Karachi</div><span class="date">01 September 2025 – Present</span><p>Working in HSE with responsibility for supporting safe site operations, hazard identification, risk control, inspections, safety awareness and compliance activities.</p></div></div>
+<div class="job"><div class="job-card"><h3>HSE Officer</h3><div class="company">Allied Contractors Pvt Ltd · Karachi</div><span class="date">10 April 2024 – 30 August 2025</span><p>Worked in HSE, supporting workplace safety activities including inspections, risk assessment, toolbox talks, PTW and incident-related safety procedures.</p></div></div>
+</div>
+</div></section>
+
+<section id="skills"><div class="container">
+<div class="section-head"><span class="eyebrow">Capabilities</span><h2>HSE Skills</h2></div>
+<div class="grid">
+<div class="card"><div class="big">⚠</div><h3>Risk Assessment</h3><p>Identifying hazards and assessing workplace risks.</p></div>
+<div class="card"><div class="big">🧰</div><h3>Toolbox Talks</h3><p>Supporting safety communication and workforce awareness.</p></div>
+<div class="card"><div class="big">🔎</div><h3>Safety Inspections & Audits</h3><p>Monitoring site conditions and safety compliance.</p></div>
+<div class="card"><div class="big">📋</div><h3>PTW System</h3><p>Supporting Permit to Work processes for controlled activities.</p></div>
+<div class="card"><div class="big">🚨</div><h3>Emergency Response Planning</h3><p>Supporting preparedness for emergency situations.</p></div>
+<div class="card"><div class="big">🛡</div><h3>Unsafe Acts & Conditions</h3><p>Identifying and controlling unsafe acts and conditions.</p></div>
+<div class="card"><div class="big">🔥</div><h3>Fire Safety</h3><p>Supporting fire prevention and workplace safety practices.</p></div>
+<div class="card"><div class="big">🩹</div><h3>Accident Investigation</h3><p>Supporting investigation and documentation of incidents.</p></div>
+</div>
+</div></section>
+
+<section id="certifications"><div class="container">
+<div class="section-head"><span class="eyebrow">Credentials</span><h2>Certifications</h2></div>
+<div class="grid">
+<div class="card cert"><strong>NEBOSH</strong><h3>International General Certificate (IGC)</h3><p>NEBOSH IGC · March 2026</p></div>
+<div class="card cert"><strong>OSHA</strong><h3>OSHA 30 Hours</h3><p>OSHA · April 2024</p></div>
+<div class="card cert"><strong>IOSH</strong><h3>Managing Safely</h3><p>IOSH · September 2024</p></div>
+<div class="card cert"><strong>First Aid</strong><h3>CPR & First Aid</h3><p>March 2024</p></div>
+</div>
+</div></section>
+
+<section id="education"><div class="container">
+<div class="section-head"><span class="eyebrow">Academic Background</span><h2>Education</h2></div>
+<div class="edu">
+<div class="card"><h3>Bachelor's in Environmental Sciences</h3><p>Allama Iqbal Open University</p><p>2025 – Present</p></div>
+<div class="card"><h3>Intermediate</h3><p>Govt Boys College</p><p>2021 – 2023</p></div>
+</div>
+</div></section>
+
+<section class="contact" id="contact"><div class="container">
+<div class="section-head"><span class="eyebrow">Get In Touch</span><h2>Contact Me</h2><p>For professional opportunities, HSE roles and career-related communication.</p></div>
+<div class="contact-grid"><div class="contact-box">
+<div class="contact-item"><small>Phone</small><a href="tel:+923462181629">+92 346 2181629</a><br><a href="tel:+923708500140">+92 370 8500140</a></div>
+<div class="contact-item"><small>Email</small><a href="mailto:faizanawanf27@gmail.com">faizanawanf27@gmail.com</a></div>
+<div class="contact-item"><small>Location</small><span>Karachi, Pakistan</span></div>
+<div class="contact-item"><small>LinkedIn</small><a href="https://www.linkedin.com/in/faizan-awan-b0352936b" target="_blank">linkedin.com/in/faizan-awan-b0352936b ↗</a></div>
+</div>
+<div class="contact-box"><h3>Let's Connect</h3><p style="color:var(--muted);margin-top:10px">I am open to connecting with professionals and organizations regarding HSE opportunities.</p><div class="buttons"><a class="btn primary" href="mailto:faizanawanf27@gmail.com?subject=HSE%20Opportunity">Email Me</a><a class="btn" href="https://wa.me/923462181629" target="_blank">WhatsApp</a></div></div>
+</div></div></section>
+</main>
+<footer>© 2026 Fezan Awan · HSE Officer · Karachi, Pakistan</footer>
+<script>
+function toggleMenu(){const l=document.querySelector('.links');l.style.display=l.style.display==='flex'?'none':'flex';l.style.position='absolute';l.style.top='72px';l.style.left='0';l.style.right='0';l.style.padding='20px';l.style.background='#081522';l.style.flexDirection='column';}
+</script>
+</body>
+</html>
