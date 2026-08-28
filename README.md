@@ -1,12 +1,8 @@
-# Fezan Awan — HSE Officer Portfolio
+# Fezan Ahmed — HSE Officer Portfolio
 
-## Free hosting with GitHub Pages
-1. Create a GitHub account at https://github.com/
-2. Create a new **public** repository named `fezan-awan.github.io`.
-3. Upload `index.html` and `Fezan-Awan-CV.pdf`.
-4. Open **Settings → Pages**.
-5. Under **Build and deployment**, select **Deploy from a branch**, choose `main`, and save.
-6. Your site will be available at `https://fezan-awan.github.io/`.
+The updated website uses **Fezan Ahmed** branding and includes an expanded HSE skills section.
 
-## Editing
-All website content is in `index.html`. Replace the placeholder initials avatar with a professional photo later if desired.
+Recommended clean GitHub Pages address:
+`https://fezan-ahmed.github.io/`
+
+To get that clean address, the GitHub account username should be changed to `fezan-ahmed` (if available) and the repository should remain `Fezan-Ahmed.github.io`.
